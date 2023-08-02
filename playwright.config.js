@@ -25,7 +25,7 @@ module.exports = defineConfig({
       use: {
         ...devices['Desktop Chrome'],
         launchOptions: {
-          headless: false, // Run the browser in non-headless mode
+          headless: true, // Run the browser in non-headless mode
         },
         // Enable video recording for the 'chromium' project
         video: 'on',
