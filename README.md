@@ -19,6 +19,7 @@ To get started, follow these steps:
 
 2.  Navigate to the project directory.
 3.  Run `npm install` or `yarn install` to install the project dependencies.
+4.  Run `npx playwright install` to install the playwright and playwright test.
 
 ## Configuration
 
@@ -34,6 +35,22 @@ To run the tests, follow these steps:
 2.  Navigate to the project directory.
 3.  Run `npx playwright test` or `npm run test` to run the test suite.
 4.  After the test suite completes, you can view the screenshots in the `screenshots` folder and the execution video in the `recordings` folder.
+
+## Running with Docker
+
+Alternatively, you can run the tests using Docker to ensure a consistent test environment. To do this, follow these steps:
+
+1. Build the Docker image:
+
+``` docker build -t playwright-test . ```
+
+2. Create and start a Docker container from the image:
+
+``` docker run -it playwright-test ```
+
+After the test suite completes, you can view the test artifacts in the screenshots and recordings folders inside the container. To copy the artifacts from the container to your local machine, use the following command:
+
+``` docker cp playwright-container:/path/to/artifacts /path/to/local/destination ```
 
 ## Contact
 
