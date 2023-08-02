@@ -22,7 +22,11 @@ jobs:
 
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: npm install 
+      
+      # Step 3: Install playwright
+      - name: Install dependencies
+        run: npx playwright install 
 
       # Step 4: Run tests
       - name: Run tests
